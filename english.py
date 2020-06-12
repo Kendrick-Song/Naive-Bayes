@@ -173,7 +173,7 @@ def main():
         ham_list, ham_set = get_word(ham_file)
         spam_list, spam_set = get_word(spam_file)
         union_set = ham_set | spam_set  # 合并纯单词集合
-        ham_word_pro = count_word_prob(ham_list, union_set)  # 单词在ham中的出现频率字典
+        ham_word_pro = count_word_prob(ham_list, union_set)  # 单词在ham中的出现频率字典(多项式特征)
         spam_word_pro = count_word_prob(spam_list, union_set)  # 单词在spam里的出现频率字典
         rig, wrg = filter(ham_word_pro, spam_word_pro, test_file)
         right_rate_list.append(rig)  # 返回正确率
