@@ -185,8 +185,6 @@ def main():
     plt.scatter(x, y)
     plt.title('Correct Rate of 100 Times')
     plt.show()
-    # 输出100次误报spam->ham占比列表
-    # print(wrong_spam_rate_list)
     return
 
 
