@@ -134,8 +134,6 @@ def filter(ham_word_pro, spam_word_pro, test_file):
 
         if email_spam_prob > 0.9:  # P(spam|word1word2…wordn) > 0.9 认为是spam垃圾邮件
             print(file_name, 'spam', email_spam_prob)
-            # if file_name.split('_')[1] == '25.txt':
-            #     print(prob_dict)
             if file_name.split('_')[0] == 'spam':  # 记录是否判断准确
                 right += 1
             else:
@@ -143,8 +141,6 @@ def filter(ham_word_pro, spam_word_pro, test_file):
                 print('***********************Wrong Prediction***********************')
         else:
             print(file_name, 'ham', email_spam_prob)
-            # if file_name.split('_')[1] == '25.txt':
-            #     print(prob_dict)
             if file_name.split('_')[0] == 'ham':  # 记录是否判断准确
                 right += 1
             else:
