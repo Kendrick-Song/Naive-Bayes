@@ -155,7 +155,6 @@ def filter(ham_word_pro, spam_word_pro, test_file):
         wrong_spam_rate = [-1]  # 表示总误判次数为0
     return right_rate, wrong_spam_rate
 
-
 def main():
     # 主函数
     right_rate_list = []
